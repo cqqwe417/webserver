@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huigou.webserver.dao.read.WiAccessMapper">
+  <resultMap id="BaseResultMap" type="com.huigou.webserver.entity.WiAccess">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="parentId" jdbcType="BIGINT" property="parentId" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="accessUrl" jdbcType="VARCHAR" property="accessUrl" />
+    <result column="orderCode" jdbcType="BIGINT" property="orderCode" />
+    <result column="interceptLevel" jdbcType="INTEGER" property="interceptLevel" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="createBy" jdbcType="BIGINT" property="createBy" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="updateBy" jdbcType="BIGINT" property="updateBy" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, parentId, level, name, accessUrl, orderCode, interceptLevel, status, createBy, 
+    createTime, updateBy, updateTime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from wi_access
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <resultMap id="BaseResultMap" type="com.huigou.webserver.entity.WiAccess">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="parentId" jdbcType="BIGINT" property="parentId" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="accessUrl" jdbcType="VARCHAR" property="accessUrl" />
+    <result column="orderCode" jdbcType="BIGINT" property="orderCode" />
+    <result column="interceptLevel" jdbcType="INTEGER" property="interceptLevel" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="createBy" jdbcType="BIGINT" property="createBy" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="updateBy" jdbcType="BIGINT" property="updateBy" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, parentId, level, name, accessUrl, orderCode, interceptLevel, status, createBy, 
+    createTime, updateBy, updateTime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from wi_access
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+</mapper>

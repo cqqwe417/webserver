@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.huigou.webserver.dao.read.WiRandomImageMapper" >
+  <resultMap id="BaseResultMap" type="com.huigou.webserver.entity.WiRandomImage" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="keyWord" property="keyWord" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="colorA" property="colorA" jdbcType="DOUBLE" />
+    <result column="colorB" property="colorB" jdbcType="DOUBLE" />
+    <result column="colorC" property="colorC" jdbcType="DOUBLE" />
+    <result column="colorD" property="colorD" jdbcType="DOUBLE" />
+    <result column="colorE" property="colorE" jdbcType="DOUBLE" />
+    <result column="colorF" property="colorF" jdbcType="DOUBLE" />
+    <result column="colorG" property="colorG" jdbcType="DOUBLE" />
+    <result column="colorH" property="colorH" jdbcType="DOUBLE" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="createTime" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="createBy" property="createBy" jdbcType="BIGINT" />
+    <result column="updateTime" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="updateBy" property="updateBy" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, keyWord, url, colorA, colorB, colorC, colorD, colorE, colorF, colorG, colorH, 
+    status, createTime, createBy, updateTime, updateBy
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from wi_random_image
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+</mapper>

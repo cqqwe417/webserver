@@ -1,0 +1,16 @@
+package com.huigou.webserver.service.impl;
+
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Service;
+
+
+@Service
+@Transactional(rollbackOn=Exception.class)
+public class WiUserService {
+    
+    
+    
+    
+
+}

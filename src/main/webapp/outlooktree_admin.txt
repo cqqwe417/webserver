@@ -1,0 +1,22 @@
+﻿[
+	{id:"root",text:"经纪人后台管理系统"},
+		{id:"agentMng",text:"经纪人管理",pid:"root"},
+			{id:"agentList",text:"经纪人列表",pid:"agentMng",url:"agent/agentListMiniIndex.action"},
+		{id:"org",text:"组织架构",pid:"root"},
+			{id:"orgMng",text:"组织管理",pid:"org",url:"company/companyListIndex.action"},
+			{id:"storeMng",text:"门店管理",pid:"org",url:"store/storeListIndex.action"},
+		{id:"houseMng",text:"房源管理",pid:"root"},
+			{id:"houseList",text:"房源管理",pid:"houseMng",url:"pages/house/sell/sellHouseList.jsp"},
+		{id:"accountMng",text:"账号管理",pid:"root"},
+			{id:"accountList",text:"账号管理",pid:"accountMng",url:"lfEmployee/gotoEmployeeList.action"},
+		{id:"opMng",text:"运营管理",pid:"root"},
+			
+			
+		
+			{id:"feedBack",text:"意见反馈",pid:"opMng",url:"lfAppFeedBack/gotoFeedBackList.action"},
+		{id:"report",text:"数据统计",pid:"root"},
+            {id:"agentBizReport",text:"经纪人业务明细日报表",pid:"report",url:"report/gotoAgentBizReport.action"},
+            {id:"storeBizReport",text:"门店业务明细日报表",pid:"report",url:"report/gotoStoreBizReport.action"},
+            {id:"storeMonReport",text:"门店业务明细月报表",pid:"report",url:"report/gotoStoreMonReport.action"} 
+			
+]

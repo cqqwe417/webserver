@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.huigou.webserver.dao.write.WiRandomImageMapper" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from wi_random_image
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.huigou.webserver.entity.WiRandomImage" >
+    insert into wi_random_image (id, keyWord, url, 
+      colorA, colorB, colorC, 
+      colorD, colorE, colorF, 
+      colorG, colorH, status, 
+      createTime, createBy, updateTime, 
+      updateBy)
+    values (#{id,jdbcType=BIGINT}, #{keyWord,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, 
+      #{colorA,jdbcType=DOUBLE}, #{colorB,jdbcType=DOUBLE}, #{colorC,jdbcType=DOUBLE}, 
+      #{colorD,jdbcType=DOUBLE}, #{colorE,jdbcType=DOUBLE}, #{colorF,jdbcType=DOUBLE}, 
+      #{colorG,jdbcType=DOUBLE}, #{colorH,jdbcType=DOUBLE}, #{status,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=BIGINT}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{updateBy,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.huigou.webserver.entity.WiRandomImage" >
+    insert into wi_random_image
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="keyWord != null" >
+        keyWord,
+      </if>
+      <if test="url != null" >
+        url,
+      </if>
+      <if test="colorA != null" >
+        colorA,
+      </if>
+      <if test="colorB != null" >
+        colorB,
+      </if>
+      <if test="colorC != null" >
+        colorC,
+      </if>
+      <if test="colorD != null" >
+        colorD,
+      </if>
+      <if test="colorE != null" >
+        colorE,
+      </if>
+      <if test="colorF != null" >
+        colorF,
+      </if>
+      <if test="colorG != null" >
+        colorG,
+      </if>
+      <if test="colorH != null" >
+        colorH,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="createTime != null" >
+        createTime,
+      </if>
+      <if test="createBy != null" >
+        createBy,
+      </if>
+      <if test="updateTime != null" >
+        updateTime,
+      </if>
+      <if test="updateBy != null" >
+        updateBy,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="keyWord != null" >
+        #{keyWord,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="colorA != null" >
+        #{colorA,jdbcType=DOUBLE},
+      </if>
+      <if test="colorB != null" >
+        #{colorB,jdbcType=DOUBLE},
+      </if>
+      <if test="colorC != null" >
+        #{colorC,jdbcType=DOUBLE},
+      </if>
+      <if test="colorD != null" >
+        #{colorD,jdbcType=DOUBLE},
+      </if>
+      <if test="colorE != null" >
+        #{colorE,jdbcType=DOUBLE},
+      </if>
+      <if test="colorF != null" >
+        #{colorF,jdbcType=DOUBLE},
+      </if>
+      <if test="colorG != null" >
+        #{colorG,jdbcType=DOUBLE},
+      </if>
+      <if test="colorH != null" >
+        #{colorH,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null" >
+        #{createBy,jdbcType=BIGINT},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateBy != null" >
+        #{updateBy,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.huigou.webserver.entity.WiRandomImage" >
+    update wi_random_image
+    <set >
+      <if test="keyWord != null" >
+        keyWord = #{keyWord,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        url = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="colorA != null" >
+        colorA = #{colorA,jdbcType=DOUBLE},
+      </if>
+      <if test="colorB != null" >
+        colorB = #{colorB,jdbcType=DOUBLE},
+      </if>
+      <if test="colorC != null" >
+        colorC = #{colorC,jdbcType=DOUBLE},
+      </if>
+      <if test="colorD != null" >
+        colorD = #{colorD,jdbcType=DOUBLE},
+      </if>
+      <if test="colorE != null" >
+        colorE = #{colorE,jdbcType=DOUBLE},
+      </if>
+      <if test="colorF != null" >
+        colorF = #{colorF,jdbcType=DOUBLE},
+      </if>
+      <if test="colorG != null" >
+        colorG = #{colorG,jdbcType=DOUBLE},
+      </if>
+      <if test="colorH != null" >
+        colorH = #{colorH,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        createTime = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null" >
+        createBy = #{createBy,jdbcType=BIGINT},
+      </if>
+      <if test="updateTime != null" >
+        updateTime = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateBy != null" >
+        updateBy = #{updateBy,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.huigou.webserver.entity.WiRandomImage" >
+    update wi_random_image
+    set keyWord = #{keyWord,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR},
+      colorA = #{colorA,jdbcType=DOUBLE},
+      colorB = #{colorB,jdbcType=DOUBLE},
+      colorC = #{colorC,jdbcType=DOUBLE},
+      colorD = #{colorD,jdbcType=DOUBLE},
+      colorE = #{colorE,jdbcType=DOUBLE},
+      colorF = #{colorF,jdbcType=DOUBLE},
+      colorG = #{colorG,jdbcType=DOUBLE},
+      colorH = #{colorH,jdbcType=DOUBLE},
+      status = #{status,jdbcType=INTEGER},
+      createTime = #{createTime,jdbcType=TIMESTAMP},
+      createBy = #{createBy,jdbcType=BIGINT},
+      updateTime = #{updateTime,jdbcType=TIMESTAMP},
+      updateBy = #{updateBy,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
